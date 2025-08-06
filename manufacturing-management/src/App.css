@@ -1,0 +1,174 @@
+/* Manufacturing Management System Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F3F4F6;
+}
+
+/* Custom Ant Design overrides */
+.ant-layout-sider {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-menu {
+  border-right: none !important;
+}
+
+.ant-menu-item-selected {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  border-right: 3px solid #10B981 !important;
+}
+
+.ant-menu-item:hover {
+  background-color: rgba(16, 185, 129, 0.05) !important;
+}
+
+/* Status badges */
+.status-active {
+  background-color: #10B981;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-inactive {
+  background-color: #9CA3AF;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Card hover effects */
+.ant-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.ant-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Primary buttons */
+.ant-btn-primary {
+  background-color: #10B981;
+  border-color: #10B981;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.ant-btn-primary:hover {
+  background-color: #059669;
+  border-color: #059669;
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Table styling */
+.ant-table-thead > tr > th {
+  background-color: #F9FAFB;
+  color: #374151;
+  font-weight: 600;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: rgba(16, 185, 129, 0.02);
+}
+
+/* Form styling */
+.ant-form-item-label > label {
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Dashboard cards */
+.dashboard-card {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: white;
+  border: none;
+}
+
+.dashboard-card .ant-card-body {
+  padding: 24px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ant-layout-content {
+    margin: 16px !important;
+    padding: 16px !important;
+  }
+  
+  .ant-layout-header {
+    padding: 0 16px !important;
+  }
+  
+  .ant-layout-header > div {
+    font-size: 16px !important;
+  }
+}
+
+/* Drag and drop styling */
+.sortable-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 8px;
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.sortable-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sortable-item.is-dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
+}
+
+/* CSV import styling */
+.csv-preview {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.import-success {
+  background-color: #F0FDF4;
+  border-left: 4px solid #10B981;
+}
+
+.import-error {
+  background-color: #FEF2F2;
+  border-left: 4px solid #EF4444;
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
